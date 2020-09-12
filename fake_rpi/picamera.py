@@ -4,9 +4,10 @@
 # see LICENSE for full details
 ##############################################
 import numpy as np  # type: ignore
+
+from .Base import Base
 # import platform
 from .wrappers import printf
-from .Base import Base
 
 
 class BGR(object):
@@ -48,6 +49,18 @@ class PiCamera(Base):
     @printf
     def capture(self, output, format=None, use_video_port=False, resize=None, splitter_port=0, **options):
         # this does nothing
+        pass
+
+    def start_preview(self, *args, **kwargs):
+        pass
+
+    def start_recording(self, *args, **kwargs):
+        pass
+
+    def stop_recording(self, *args, **kwargs):
+        pass
+
+    def stop_preview(self, *args, **kwargs):
         pass
 
 
